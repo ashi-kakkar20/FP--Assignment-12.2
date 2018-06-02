@@ -1,0 +1,39 @@
+<!-- This assignment helps to master the FP helpers of array concept -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 12.2</title>
+</head>
+<body>
+    <script>
+    var numbers=[10,8,12,36]; //Input array
+    console.log("Original values: "+ numbers);
+
+    //Doubling the input values using Map method
+    var doubles=numbers.map(function (elem)
+    {
+        return elem*2;
+    });
+    console.log("Doubled values: "+ doubles);
+
+    //Filtering the values greater than 20 using filter method
+    var fil= doubles.filter(function (elems)
+    {
+        return elems>20;
+        
+    });
+    console.log("Filtered values which are greater than 20: " + fil);
+
+    //Calculating the sum of filtered values using reduce method
+    var result=fil.reduce(function(sum,value)
+    {
+       return (sum+value);
+    },0);
+        
+    console.log("Sum of Filtered values of the array: " + result);
+    </script>
+</body>
+</html>
